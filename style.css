@@ -6,3 +6,9 @@
   border-radius: 8px;
   background-color: rgb(252, 225, 184);
 }
+
+.srcImg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
