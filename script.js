@@ -2,10 +2,16 @@ async function getAPIresponse() {
   // NASA API-key:
   const div = document.querySelector(".container");
 
-  const apiKey = "OaPinqeq6WhflrHOHkq5dJ2mFVravvKkjEC1gJXu";
-  const apiUrl = `https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2018-01-01&&dim=0.10&api_key=${apiKey}`;
+  // NASA:
+  // const apiKey = "OaPinqeq6WhflrHOHkq5dJ2mFVravvKkjEC1gJXu";
+  // const apiUrl = `https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2018-01-01&&dim=0.10&api_key=${apiKey}`;
 
-  // https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2018-01-01&&dim=0.10&api_key=OaPinqeq6WhflrHOHkq5dJ2mFVravvKkjEC1gJXu
+  // WEATHER:
+  // const lat = "50.406663";
+  // const lon = "30.335415";
+  // const cnt = 7;
+  // const apiKey = "4f560c6d87f9572b10f95d7b21a37b7c";
+  // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
   let result = await fetch(apiUrl);
   let resultWait = await result.json();
@@ -21,32 +27,4 @@ async function getAPIresponse() {
 
 getAPIresponse();
 
-// async function showAvatar() {
-//   // запрашиваем JSON с данными пользователя
-//   const apiKey = "OaPinqeq6WhflrHOHkq5dJ2mFVravvKkjEC1gJXu";
-//   const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
-//   let response = await fetch(apiUrl);
-//   let user = await response.json();
-
-//   console.log(response);
-//   console.log(user.hdurl);
-
-//   // запрашиваем информацию об этом пользователе из github
-//   let githubResponse = await fetch(`https://api.github.com/users/${user.name}`);
-//   let githubUser = await githubResponse.json();
-
-//   // отображаем аватар пользователя
-//   let img = document.createElement("img");
-//   img.src = githubUser.avatar_url;
-//   img.className = "promise-avatar-example";
-//   document.body.append(img);
-
-//   // ждём 3 секунды и затем скрываем аватар
-//   await new Promise((resolve, reject) => setTimeout(resolve, 3000));
-
-//   img.remove();
-
-//   return githubUser;
-// }
-
-// showAvatar();
+//  https://api.openweathermap.org/data/2.5/forecast/daily?lat=50.406663&lon=30.335415&cnt=16&appid=4f560c6d87f9572b10f95d7b21a37b7c
